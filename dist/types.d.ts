@@ -14,7 +14,6 @@ export type DECRYPTION_PAYLOAD_DETAILS = {
     version: number;
     type: string;
     provider: string;
-    algorithm?: string;
 } & DECRYPTION_PAYLOAD;
 export type PAYLOAD_OPTIONS = {
     type?: string;
@@ -28,14 +27,12 @@ export type HASH_RESPONSE = {
 export type ENCRYPTION_PAYLOAD_STREAM = {
     salt: string;
     iv: string;
-    algorithm: string;
     stream: Readable;
     getTag: () => string;
 };
 export type DECRYPTION_PAYLOAD_STREAM = {
     salt: string;
     iv: string;
-    algorithm: string;
     stream: Readable;
     tag: string;
 };
@@ -48,7 +45,6 @@ export type ENCRYPTION_PAYLOAD_DETAILS_STREAM = {
     stream: Readable;
     salt: string;
     iv: string;
-    algorithm: string;
     getTag: () => string;
     version: number;
     type: string;

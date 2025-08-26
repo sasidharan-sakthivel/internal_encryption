@@ -15,7 +15,7 @@ export const encrypt_symmentric = (payload, passphrase) => {
         salt: salt.toString("hex"),
         iv: iv.toString("hex"),
         tag: tag.toString("hex"),
-        algorithm: "aes-256-gcm",
+        // algorithm: "aes-256-gcm",
     };
 };
 export const decrypte_symmentric = (payload, passphrase) => {
@@ -49,7 +49,7 @@ export function encryptStream(input, passphrase) {
         salt: salt.toString("hex"),
         iv: iv.toString("hex"),
         getTag: () => authTag?.toString("hex"),
-        algorithm: "aes-256-gcm",
+        // algorithm: "aes-256-gcm",
     };
 }
 export function decryptStream(payload, passphrase) {

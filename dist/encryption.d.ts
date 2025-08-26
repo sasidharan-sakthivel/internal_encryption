@@ -6,7 +6,6 @@ export declare const encrypt_symmentric: (payload: string, passphrase: string) =
     salt: string;
     iv: string;
     tag: string;
-    algorithm: string;
 };
 export declare const decrypte_symmentric: (payload: DECRYPTION_PAYLOAD, passphrase: string) => string;
 export declare const hashWithKey: (payload: string, key: string) => string;
@@ -15,7 +14,6 @@ export declare function encryptStream(input: Readable, passphrase: string): {
     salt: string;
     iv: string;
     getTag: () => string;
-    algorithm: string;
 };
 export declare function decryptStream(payload: {
     stream: Readable;

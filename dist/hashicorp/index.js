@@ -129,7 +129,7 @@ class Vault_HashiCorp {
                 stream: encrypted.stream,
                 salt: encrypted.salt,
                 iv: encrypted.iv,
-                algorithm: encrypted.algorithm,
+                // algorithm: encrypted.algorithm,
                 getTag: encrypted.getTag,
                 version: keyVersion,
                 type: type ? type : this.defaultPolicy ? this.defaultPolicy : "",
@@ -187,7 +187,7 @@ class Vault_HashiCorp {
                 salt: payload.salt,
                 iv: payload.iv,
                 getTag: () => payload.tag,
-                algorithm: "aes-256-gcm",
+                // algorithm: "aes-256-gcm",
                 version: oldKey.version,
                 type: payload.type,
                 provider: "hashicorp",
@@ -205,7 +205,7 @@ class Vault_HashiCorp {
             salt: newEncrypted.salt,
             iv: newEncrypted.iv,
             getTag: newEncrypted.getTag,
-            algorithm: newEncrypted.algorithm,
+            // algorithm: newEncrypted.algorithm,
             version: newKey.version,
             type: payload.type
                 ? payload.type
